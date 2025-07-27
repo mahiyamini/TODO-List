@@ -1,5 +1,9 @@
+:root{
+  --main-color:brown;
+  --sub-color:burlywood;
+}
 .header{
-  background-color:darkgoldenrod;
+  background-color:var(--main-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +21,7 @@
   width: 250px;
   height: auto;
   padding: 30px;
-  background-color:khaki;
+  background-color:var(--sub-color);
   /* border: 2em; */
 }
 
@@ -32,10 +36,11 @@
 .add-btn{
   margin-top: 10px;
   padding: 5px;
-  background-color: darkgoldenrod;
+  background-color: var(--main-color);
   color: antiquewhite;
   border-radius: 2em;
   border-color: bisque;
+  cursor: pointer;
 }
 
 .input-f{
@@ -52,24 +57,50 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
-  background-color: khaki;
+  justify-content: flex-start;
+  background-color: var(--main-color);
   width: 300px;
-  height: auto;
+  height: 330px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 3px;
+  border-radius: 0.5rem;
 }
 
 .todo-item{
-  padding: 0rem;
-  background-color: darkgoldenrod;
+  padding: 1rem;
+  background-color: var(--sub-color);
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
   width: 250px;
-  color: whitesmoke;
   border-radius: 0.5em;
 }
-
+ 
 .todol{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.inpf{
+  margin:0.2em;
+}
+
+.todo-btn{
+  display: flex;
+  justify-content: center;
+}
+
+.btns{
+  background-color:aliceblue;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+  width: 3.5rem;
+}
+
+.btns:hover{
+  background-color:brown;
+  color:white;
+  cursor: pointer;
 }
