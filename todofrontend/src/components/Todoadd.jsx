@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Todoadd = ({title,date,addToDo,setDate,setTitle}) => {
+const Todoadd = ({addToDo,item,setItem}) => {
     
 
   return (
@@ -9,9 +9,9 @@ const Todoadd = ({title,date,addToDo,setDate,setTitle}) => {
       <div className='add-to-do'>
         <h2><center>Create a ToDo</center></h2>
         <label className='labela'>Title</label>
-        <input type='text' onChange={(e)=>setTitle(e.target.value)} value={title} className='input-f' required />
+        <input type='text' onChange={(e)=>setItem({...item,title: e.target.value})} value={item.title} className='input-f' required />
         <label className='labela'>Created on</label>
-        <input type='date' onChange={(e)=>setDate(e.target.value)} value={date} className='input-f' required />
+        <input type='date' onChange={(e)=>setItem({...item,date: e.target.value})} value={item.date} className='input-f' required />
         <button className='add-btn' onClick={addToDo}><strong>Add</strong></button>
       </div>
       </div>
